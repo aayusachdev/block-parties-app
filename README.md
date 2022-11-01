@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Block Events Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+An Application  which displayes all the block events happening in Berlin and provides detailed information with map location.
 
-In the project directory, you can run:
+# TechStack used-
 
-### `npm start`
+Since I decided to create a mobile-first Frontend application, the tech stack I finalized upon is:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ReactJS
+HTML5
+CSS3
+Jest
+React Testing Library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I haven't used any component library in this project, and decided to write custom CSS for the required components along with media-queries to make the application mobile-first in true sense. React along with JavaScript provides a good setup for creating Single Page application (SPA) like these, hence I went ahead with this combination. The other option I had was Angular with TypeScript as well. Creating a PWA from a react application is also a simple process, and could be added to this application as an addon feature.
+Using Jest with React Testing library was a natural choice to write robust, clean tests for each component.
 
-### `npm test`
+# Application Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I've followed a modular based approach while structuring this application. Although our application is pretty small, this approach scales well in extending an application codebase, hence I decided to use it. Here, all the individual components are in separate folders with index.js file along with a <filename>.test.js test file. This makes it easy for the reviewer to understand the tests and also go through the code implementation without jumping into other folders.
 
-### `npm run build`
+All the components have their separate stylesheets inside /styles folder while helps in preserving CSS namespace, I followed a BEM based naming for CSS classes as well. The app.css file is the one for parent component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# How to run-
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+clone this repo using git clone.
+run: yarn
+run: yarn start
 
-### `npm run eject`
+Prod link:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Application Features-
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Code splitting and Lazy loading the events lists to improve the application performace and reducing the initial bundle size.
+2. Event Filteration based on Berlin's district.
+3. Implemented debouncing while filtering for events, to improve application performance by avoiding unnecessry rendering.
+4. 'Open in Maps' option, to open the event location inside google map directly, provided a more intuitive user experience.
+5. Mobile first responsive application, with custom CSS and media queries.
+6. Card based grid layout, that provides a clean UI to view all the information together.
+7. CRA comes with webpack, jest installed already. I've used Jest and React Testing Library for writing unit tests for each component, and test coverage around 80%.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Scope of Improvement-
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Given the limited time duration for creating this, I have implemented many must-have requirements. However, I think if given more time, I would definetely improve this application by doing the following-
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. The API data is not sanitized. We can have a mechanism in place in which the required fields in the response are available for all the events.
+2. I have implemented Event filteration logic based on the event's district. We can definetely have more filters like event dates and time.
+3. Implementing infinite Scrolling for the events list, so that new events gets added to the DOM only when the user scolls to bottom. This will improve the responsiveness of the application in cases where the events array is really long, and we don't have pagination.
+4. I have used Google maps endpoint along with address to show the event location to the end user. Although this approach works well, we can also implement Google's geolocation API features which can provide an accurate geographical position of given address on the map. We would require latitudes and longitudes for each event in this case, which our current endpoint doesn't provide. We can get the latitudes/longitudes from the event's address using a third party API.
+5. Although currently, I've added unit testing for all the components, we can definetely try to make tests more rebust. Adding interactive tests using Storybook to model user behaviour in these tests.
+6. Bookmarking favourite events functionality for the user, and persisting it in the local storage for easy retreival.
+7. Adding alerts whenever a new event in the given location is scheduled, push notifying the user directly.

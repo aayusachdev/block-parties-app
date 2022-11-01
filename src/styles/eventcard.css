@@ -1,0 +1,38 @@
+.event-card {
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  height: 200px;
+  width: 350px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  font-family: Roboto-Light, sans-serif;
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px rgba(#000000, 0.2);
+}
+
+.event-card h4,
+.card p {
+  color: #3c9bca;
+}
+
+.event-card div {
+  color: #98eed8;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-card p {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #98eed8;
+}
+
+.event-card a {
+  font-size: smaller;
+}

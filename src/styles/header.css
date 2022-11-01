@@ -1,0 +1,17 @@
+.header {
+  background: #3c9bca;
+  width: 100%;
+  box-shadow: 1px 2px 2px 4px #e8e8e8;
+  position: fixed;
+  top:0;
+}
+
+.header-title {
+  font-family: "Roboto";
+  font-size: 4.2vw;
+  text-align: center;
+  padding: 1vh 1vw;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #fbeeeb;
+}
