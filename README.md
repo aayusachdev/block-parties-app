@@ -1,6 +1,6 @@
 # Block Events Finder
 
-Application which displayes block parties and fairs happening in Berlin and provides detailed information with map location.
+Application which displays block parties and fairs happening in Berlin and provides detailed information with map location.
 
 # TechStack used
 
