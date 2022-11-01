@@ -4,7 +4,7 @@ Application which displays block parties and fairs happening in Berlin and provi
 
 # TechStack used
 
-Since I decided to create a mobile-first Frontend application, the tech stack I finalized upon is:
+Since I decided to create a mobile-first Frontend application, the tech stack I finalised upon is:
 
 - ReactJS
 - HTML5
@@ -12,15 +12,15 @@ Since I decided to create a mobile-first Frontend application, the tech stack I 
 - Jest
 - React Testing Library
 
-I haven't used any component library in this project, and decided to write custom CSS for the required components along with media-queries to make the application mobile-first in true sense. React along with JavaScript provides a good setup for creating Single Page application (SPA) like these, hence I went ahead with this combination. The other option I had was Angular with TypeScript as well. Creating a PWA from a react application is also a simple process, and could be added to this application as an addon feature.
+I haven't used any component library in this project, and decided to write custom CSS for the required components along with media-queries to make the application mobile-first in true sense. React along with JavaScript provides a good setup for creating Single Page application (SPA) like these, hence I went ahead with this combination. The other option I had was Angular with TypeScript as well. Creating a PWA from a react application is also a simple process, and could be added to this application as an add-on feature.
 
 Using Jest with React Testing library was a natural choice to write robust, clean tests for each component.
 
 # Application Structure
 
-I've followed a modular based approach while structuring this application. Although our application is pretty small, this approach scales well in extending an application codebase, hence I decided to use it. Here, all the individual components are in separate folders with index.js file along with a <filename>.test.js test file. This makes it easy for the reviewer to understand the tests and also go through the code implementation without jumping into other folders.
+I've followed a modular based approach while structuring this application. Although our application is pretty small, this approach scales well in extending an application codebase, hence I decided to use it. Here, all the individual components are in separate folders with `index.js` file along with a `<filename>.test.js` test file. This makes it easy for the reviewer to understand the tests and also go through the code implementation without jumping into other folders.
 
-All the components have their separate stylesheets inside /styles folder while helps in preserving CSS namespace, I followed a BEM based naming for CSS classes as well. The app.css file is the one for parent component.
+All the components have their separate stylesheets inside `/styles` folder while helps in preserving CSS namespace, I followed a BEM based naming for CSS classes as well. The `app.css` file is the one for parent component.
 
 
 # How to run
