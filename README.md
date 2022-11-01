@@ -60,7 +60,7 @@ run: yarn start
 
 
 
-Prod link:
+Prod link:  https://berlin-events-finder.netlify.app
 
 
 
